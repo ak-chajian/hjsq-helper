@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>功能扩展中心</title>
+    <title>HJ-Helper 云端功能激活中心</title>
     <style>
-        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: #f0f2f5; display: flex; align-items: center; justify-content: center; height: 100vh; }
-        .card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 90%; max-width: 400px; text-align: center; }
-        h2 { color: #1a1a1a; margin-bottom: 10px; }
-        p { color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
-        .btn { display: block; background: #00bcd4; color: white; text-decoration: none; padding: 12px; border-radius: 30px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,188,212,0.3); }
-        .btn:hover { background: #00acc1; transform: translateY(-2px); }
-        .notice { margin-top: 20px; font-size: 12px; color: #999; border-top: 1px solid #eee; padding-top: 15px; }
+        :root { --primary: #ff4500; --secondary: #2196F3; }
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: #0a0a0b; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .card { background: #1c1c1e; width: 90%; max-width: 450px; border-radius: 20px; padding: 40px 30px; text-align: center; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .logo { font-size: 60px; margin-bottom: 20px; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        h2 { margin: 0 0 10px; font-size: 24px; color: var(--primary); }
+        .status-tag { display: inline-block; background: rgba(76, 175, 80, 0.2); color: #4caf50; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 25px; border: 1px solid #4caf50; }
+        
+        .feature-list { text-align: left; background: #2c2c2e; padding: 20px; border-radius: 12px; margin-bottom: 30px; }
+        .feature-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 14px; color: #ccc; }
+        .feature-item:last-child { margin-bottom: 0; }
+        .feature-item i { color: var(--primary); margin-right: 10px; font-style: normal; font-weight: bold; }
+
+        .warning-box { background: rgba(255, 69, 0, 0.1); border-left: 4px solid var(--primary); padding: 15px; text-align: left; margin-bottom: 30px; font-size: 13px; line-height: 1.5; color: #ffba93; }
+
+        .btn { display: block; width: 100%; padding: 16px 0; background: linear-gradient(90deg, #ff4500, #ff8c00); color: #fff; text-decoration: none; border-radius: 50px; font-size: 18px; font-weight: bold; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3); cursor: pointer; border: none; }
+        .btn:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(255, 69, 0, 0.5); }
+        
+        .footer-links { margin-top: 25px; font-size: 12px; color: #666; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
     <div class="card">
-        <div style="font-size: 50px;">📦</div>
-        <h2>功能增强模块</h2>
-        <p>
-            由于平台开源协议限制，部分核心功能（深度解析、封禁内容查看、一键极速下载）无法在应用商店版本中直接提供。
-        </p>
-        <a href="https://akptjb.com" class="btn">获取完整无限制版</a>
-        <div class="notice">
-            * 官方授权，安全加固，支持一键安装。
+        <div class="logo">🛰️</div>
+        <h2>HJ-Helper 专业版内核</h2>
+        <div class="status-tag">● 浏览器插件已就绪 (基础版)</div>
+        
+        <div class="feature-list">
+            <div class="feature-item"><i>✓</i> 自动同步：不限次金币/钻石内容解析</div>
+            <div class="feature-item"><i>✓</i> 深度还原：封禁博主历史帖子查看</div>
+            <div class="feature-item"><i>✓</i> 极速引擎：支持原片 4K 嗅探下载</div>
+            <div class="feature-item"><i>✓</i> 全域加速：CDN 节点自动匹配</div>
+        </div>
+
+        <div class="warning-box">
+            <b>⚠️ 权限受限提示：</b><br>
+            检测到您当前运行的是 [SleazyFork 公共版]，由于平台安全策略限制，上述核心解析协议已被隔离。
+        </div>
+
+        <a href="https://akptjb.com/#/" class="btn">立即激活专业版内核</a>
+        
+        <div class="footer-links">
+            <a href="#">帮助中心</a> | <a href="#">官网入口</a> | <a href="#">联系客服</a>
         </div>
     </div>
 </body>
