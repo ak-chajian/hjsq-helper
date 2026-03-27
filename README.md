@@ -1,4 +1,4 @@
-# 🔗 海角社区全能增强助手 (HJ-Helper)
+# 🔗 海角社区破解全能增强助手 (HJ-Helper)
 
 <p align="left">
   <img src="https://img.shields.io/badge/版本-v1.2.9-blue.svg" alt="Version">
