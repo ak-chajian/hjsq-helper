@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HJ-Helper 云端功能激活中心</title>
+    <title>海角社区全能增强助手 - 官方文档</title>
     <style>
-        :root { --primary: #ff4500; --secondary: #2196F3; }
-        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: #0a0a0b; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-        .card { background: #1c1c1e; width: 90%; max-width: 450px; border-radius: 20px; padding: 40px 30px; text-align: center; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        .logo { font-size: 60px; margin-bottom: 20px; animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        h2 { margin: 0 0 10px; font-size: 24px; color: var(--primary); }
-        .status-tag { display: inline-block; background: rgba(76, 175, 80, 0.2); color: #4caf50; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 25px; border: 1px solid #4caf50; }
+        :root { --github-gray: #f6f8fa; --github-border: #d0d7de; --primary-blue: #0969da; --accent-orange: #ff4500; }
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #1f2328; line-height: 1.5; }
+        .wrapper { max-width: 900px; margin: 40px auto; padding: 45px; border: 1px solid var(--github-border); border-radius: 6px; box-shadow: 0 8px 24px rgba(149,157,165,0.2); }
         
-        .feature-list { text-align: left; background: #2c2c2e; padding: 20px; border-radius: 12px; margin-bottom: 30px; }
-        .feature-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 14px; color: #ccc; }
-        .feature-item:last-child { margin-bottom: 0; }
-        .feature-item i { color: var(--primary); margin-right: 10px; font-style: normal; font-weight: bold; }
-
-        .warning-box { background: rgba(255, 69, 0, 0.1); border-left: 4px solid var(--primary); padding: 15px; text-align: left; margin-bottom: 30px; font-size: 13px; line-height: 1.5; color: #ffba93; }
-
-        .btn { display: block; width: 100%; padding: 16px 0; background: linear-gradient(90deg, #ff4500, #ff8c00); color: #fff; text-decoration: none; border-radius: 50px; font-size: 18px; font-weight: bold; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3); cursor: pointer; border: none; }
-        .btn:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(255, 69, 0, 0.5); }
+        /* 标题样式 */
+        h1 { font-size: 32px; border-bottom: 1px solid var(--github-border); padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        h2 { font-size: 24px; border-bottom: 1px solid var(--github-border); padding-bottom: 8px; margin-top: 35px; }
         
-        .footer-links { margin-top: 25px; font-size: 12px; color: #666; }
-        .footer-links a { color: #888; text-decoration: none; margin: 0 10px; }
+        /* 引用块样式 (重磅福利) */
+        .welfare-box { background-color: #fff8c4; border-left: 0.25em solid #d4a72c; padding: 16px; margin: 20px 0; border-radius: 6px; }
+        .welfare-title { font-weight: bold; color: #735c0f; font-size: 18px; margin-bottom: 10px; }
+
+        /* 列表与功能展示 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .feature-tag { font-weight: bold; color: var(--primary-blue); margin-right: 5px; }
+
+        /* 按钮与链接 */
+        .main-link { display: inline-block; background: var(--primary-blue); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; margin-top: 10px; transition: 0.2s; }
+        .main-link:hover { background: #0550ae; }
+        a { color: var(--primary-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* 分割线 */
+        hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: var(--github-border); border: 0; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) { .wrapper { margin: 10px; padding: 20px; } h1 { font-size: 24px; } }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="logo">🛰️</div>
-        <h2>HJ-Helper 专业版内核</h2>
-        <div class="status-tag">● 浏览器插件已就绪 (基础版)</div>
-        
-        <div class="feature-list">
-            <div class="feature-item"><i>✓</i> 自动同步：不限次金币/钻石内容解析</div>
-            <div class="feature-item"><i>✓</i> 深度还原：封禁博主历史帖子查看</div>
-            <div class="feature-item"><i>✓</i> 极速引擎：支持原片 4K 嗅探下载</div>
-            <div class="feature-item"><i>✓</i> 全域加速：CDN 节点自动匹配</div>
-        </div>
 
-        <div class="warning-box">
-            <b>⚠️ 权限受限提示：</b><br>
-            检测到您当前运行的是 [SleazyFork 公共版]，由于平台安全策略限制，上述核心解析协议已被隔离。
-        </div>
+<div class="wrapper">
+    <h1>🔗 海角社区全能增强助手</h1>
 
-        <a href="https://akptjb.com/#/" class="btn">立即激活专业版内核</a>
-        
-        <div class="footer-links">
-            <a href="#">帮助中心</a> | <a href="#">官网入口</a> | <a href="#">联系客服</a>
+    <div class="welfare-box">
+        <div class="welfare-title">🔥 重磅福利：官网注册即送首月免费体验！</div>
+        <div>
+            为回馈大家，现在前往我们的官网注册账号，即可立即解锁本脚本第一个月的完全免费使用权限！<span style="font-weight: bold; color: var(--accent-orange);">无任何功能限制，欢迎尽情白嫖体验！</span>
         </div>
     </div>
+
+    <h2>最新地址发布</h2>
+    <p>🌐 <b>获取更多脚本及注册地址：</b> <a href="https://akptjb.com" target="_blank">https://akptjb.com</a></p>
+    <a href="https://akptjb.com" target="_blank" class="main-link">点击前往官方网站</a>
+
+    <h2>✨ 核心脚本功能</h2>
+    <ul>
+        <li><span class="feature-tag">不限次播放：</span> 解锁钻石/金币视频（完整时长）、图片及音频。</li>
+        <li><span class="feature-tag">快捷下载：</span> 一键获取视频播放链接，轻松下载视频到本地。</li>
+        <li><span class="feature-tag">内容预知：</span> 帖子标题前缀智能提示，快速区分是否包含视频或图片。</li>
+        <li><span class="feature-tag">权限突破：</span> 支持查看被封禁的隐藏内容。</li>
+        <li><span class="feature-tag">便捷登录：</span> 自动填写已保存的账号密码，解放双手。</li>
+        <li><span class="feature-tag">自动展开：</span> 浏览帖子自动展开全文，提升阅读体验。</li>
+        <li><span class="feature-tag">身份高亮：</span> 直观显示 VIP 标识。</li>
+        <li><span class="feature-tag">清爽浏览：</span> 强力屏蔽站内各种烦人广告。</li>
+    </ul>
+
+    <h2>🛡️ 我们的服务与保障</h2>
+    <ul>
+        <li><b>注册即免费：</b> 首月零门槛体验，满意后再考虑后续支持！</li>
+        <li><b>售后无忧：</b> 后期若购买本脚本，如遇站点更新导致脚本失效且无法修复，可免费更换我们站内的任意其他脚本。</li>
+        <li><b>无条件转移：</b> 目前已开放额度转移功能，如果您购买后改变主意，可在网站内将剩余额度转移到站内其他脚本，不花冤枉钱。</li>
+    </ul>
+
+    <hr>
+
+    <h2>💬 联系客服</h2>
+    <p>📢 <b>Telegram频道:</b> <a href="https://t.me/akptjb" target="_blank">https://t.me/akptjb</a></p>
+    <p>👥 <b>Telegram群聊:</b> <a href="https://t.me/akptjb_group" target="_blank">https://t.me/akptjb_group</a></p>
+    <p>✉️ <b>官方邮箱:</b> <a href="mailto:akptjb@proton.me">akptjb@proton.me</a></p>
+
+    <p style="font-size: 12px; color: #888; margin-top: 40px;">最后更新：2026年3月27日</p>
+</div>
+
 </body>
 </html>
